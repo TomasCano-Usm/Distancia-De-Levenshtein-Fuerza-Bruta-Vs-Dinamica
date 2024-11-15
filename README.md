@@ -1,5 +1,5 @@
 # Distancia-De-Levenshtein-Fuerza-Bruta-Vs-Dinamica
-Comparacion entre dos paradigmas del diseño de algoritmos, en este caso, la distancia de Levenshtein.
+**Comparacion entre dos paradigmas del diseño de algoritmos, en este caso, la distancia de Levenshtein.**
 
 **Instrucciones de ejecucion de los codigos:**
 Debe disponerse de una terminal de ejecucion de Linux, en mi caso, utilice Ubuntu. Luego deben situarse los codigos en la misma carpeta que los archivos de costo y los casos de prueba. 
