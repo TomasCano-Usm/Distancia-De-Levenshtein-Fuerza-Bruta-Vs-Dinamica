@@ -35,7 +35,7 @@ int backtracking(string s1, string s2, int i, int j) {
         for(int w = j; w < s2.length(); w++){
             costo += costo_ins(s2[w]);
         } 
-        return costo; // Si s1 está vacío, solo hay que insertar (s2.length() - j) * costo_ins();
+        return costo; 
     }
     if (j == s2.length()){
         int costo = 0;
@@ -63,7 +63,7 @@ int backtracking(string s1, string s2, int i, int j) {
 }
 
 int edicion_ext(string s1, string s2) {
-    return backtracking(s1, s2, 0, 0); // Comenzar el backtracking desde el inicio de ambas cadenas
+    return backtracking(s1, s2, 0, 0);
 }
 
 void leerMatrizCosto(string txtName, vvi &matriz){
