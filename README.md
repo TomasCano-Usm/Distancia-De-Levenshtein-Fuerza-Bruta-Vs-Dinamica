@@ -9,3 +9,7 @@ Para compilar los codigos se ocupan los comados g++ nombredelarchivo.cpp -o nomb
 Notar que por defecto estan los codigos con entarda estandar, pero pueden quitarse los comentarios para leer los archivos de prueba. Además, debes modificar los nombres
 de los archivos de entrada y salida a tu preferencia. Otro punto a destacar, es que si se quieren ingresar cadenas vacias, se debe omitir la toma de datos desde el archivo de esa cadena y establecerla
 manualmente como cadena vacia. 
+
+**Sobre el output de los casos de prueba:**
+Los outputs seran en un formato de N M T, donde N y M son el largo de las cadenas S1 y S2, y T es el tiempo de ejecucion en microsegundos.
+Notar que este formato sirve para leer los datos en python, guardarlos en arrays distintos y asi generar graficos que permitan visualizar mejor la informacion.
