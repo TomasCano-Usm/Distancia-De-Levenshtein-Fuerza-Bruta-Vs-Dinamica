@@ -75,7 +75,7 @@ int recursion(string s1, string s2, int i, int j, vvi &cache) {
     int c1 = costo_sub(s1[i], s2[j]) + recursion(s1, s2, i + 1, j + 1, cache); // Sustitución
     int c2 = costo_ins(s2[j]) + recursion(s1, s2, i, j + 1, cache); // Inserción
     int c3 = costo_del(s1[i]) + recursion(s1, s2, i + 1, j, cache); // Eliminación
-    // Costo de transposición (solo si se pueden transponer)
+    // Costo de transposición
     int c4 = INT_MAX;
     if (i + 1 < s1.length() && j + 1 < s2.length() && s1[i] == s2[j + 1] && s1[i + 1] == s2[j]) {
         c4 = costo_trans(s1[i], s2[j]) + recursion(s1, s2, i + 2, j + 2, cache); // Transposición
@@ -89,12 +89,12 @@ int edicion_ext(string s1, string s2) {
     vvi cache(s1.length() + 1, vector<int>(s2.length() + 1, -1));
     cache[0][0] = 0;
     for(int i = 1; i < s1.length() + 1; i++){
-        cache[i][0] = cache[i - 1][0] + costo_del(s1[i - 1]);//+ seguir... 
+        cache[i][0] = cache[i - 1][0] + costo_del(s1[i - 1]);
     }
     for(int j = 1; j < s2.length() + 1; j++){
         cache[0][j] = cache[0][j - 1] + costo_ins(s2[j - 1]);
     }
-    return recursion(s1, s2, 0, 0, cache);; // Comenzar el backtracking desde el inicio de ambas cadenas
+    return recursion(s1, s2, 0, 0, cache);
 }
 
 
